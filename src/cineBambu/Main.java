@@ -42,6 +42,7 @@ public class Main {
 			int opcion;
 
 			do {
+				 System.out.println("\nHola, " + nombreUsuario + ". ¿Qué desea hacer?");
 				System.out.println("\nElige una opción:");
 				System.out.println("1. Estas son las peliculas disponibles:");
 				System.out.println("2. Comprar entradas: ");
@@ -54,6 +55,8 @@ public class Main {
 
 					break;
 				case 2:
+					System.out.println("Cuantas entradas deseas: (minimo 1)");
+                    // Aquí podría haber otro do-while si queremos permitir comprar varias veces
 
 					break;
 				case 3:
