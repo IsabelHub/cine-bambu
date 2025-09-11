@@ -31,7 +31,7 @@ public class SalaDeCine {
 		return butacas;
 	}
 	
-	public void asientosLibres() {
+	public void asientosLibres() {//Recorre los asientos e imprime una cuadricula con los asientos disponibles
 		int contador = 0;
 		for (int i = 0; i < butacas.length; i++) { // Recorre filas
 			
@@ -50,6 +50,22 @@ public class SalaDeCine {
 		}
 
 		
+	}
+	
+	public boolean hayEspacio(int numFila, int numButaca) {
+		boolean hayEspacio = true;
+		
+		if(butacas[numFila][numButaca]==null) {
+			System.out.println("La butaca "+numButaca+" de la fila "+numFila+" esta disponible.");
+			
+		} else {
+			System.out.println("La butaca "+numButaca+" de la fila "+numFila+" no esta disponible.");
+			hayEspacio = false;
+		}
+		
+		
+		
+		return hayEspacio;
 	}
 	
 	
