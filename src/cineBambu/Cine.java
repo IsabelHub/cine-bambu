@@ -45,9 +45,9 @@ public class Cine {
 	}
 	
 	/*
-
-	// 2. Obtener salas con al menos 'cantidad' asientos libres (sin ArrayList)
+	// 2. Obtener salas con al menos asientos libres 
 	public SalaDeCine[] getSalasConEspacio(int cantidad) {
+	//cantidad es el espacio total de una sala
 		// Primero, contar cuántas salas cumplen la condición
 		int contador = 0;
 		for (int i = 0; i < salas.length; i++) {
@@ -68,6 +68,8 @@ public class Cine {
 
 		return disponibles;
 	}
+	
+	
 
 	// 3. Mostrar ocupación por sala
 	public void mostrarOcupacionSalas() {
