@@ -71,12 +71,10 @@ public class Main {
 					
 					break;
 				case 2:
-					// Aquí podría haber otro do-while si queremos permitir comprar varias veces
-
 					cine.elegirPelicula(usuario);
 					
 				case 3:
-					
+					cine.mostrarOcupacionSalas();
 					break;
 				
 				default:

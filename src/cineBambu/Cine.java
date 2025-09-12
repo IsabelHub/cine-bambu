@@ -58,6 +58,7 @@ public class Cine {
 
 	}
 	  
+	
 	// 3. Mostrar ocupación por sala
 	public void mostrarOcupacionSalas() {
 		System.out.println("---- Mapa de ocupación por sala ----");
@@ -66,6 +67,8 @@ public class Cine {
 			System.out.println();
 		}
 	}
+
+
 
 	/*
 	// 4. Obtener una sala por número (útil para seleccionar sala)
