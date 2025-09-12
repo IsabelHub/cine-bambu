@@ -29,6 +29,19 @@ public class Main {
 		// Isabel
 		Scanner sc = new Scanner(System.in);
 		final int TOTAL_USUARIOS = 3;
+		Pelicula pelicula1 = new Pelicula("La princesa Mononoke", 90, 14, 5, 1);
+		Pelicula pelicula2 = new Pelicula("El viaje de Chihiro", 100, 14, 5, 2);
+		Pelicula pelicula3 = new Pelicula("Amelie", 120, 18, 5, 1);
+		
+		Usuario[][] butacas = new Usuario[8][10];
+		
+		SalaDeCine sala1 = new SalaDeCine(1,pelicula1 , butacas);
+		SalaDeCine sala2 = new SalaDeCine(1,pelicula2 , butacas);
+		SalaDeCine sala3 = new SalaDeCine(1,pelicula3 , butacas);
+		
+		SalaDeCine[] salas = {sala1, sala2, sala3};
+		
+		Cine cine = new Cine("Bambu",salas);
 
 		for (int i = 1; i < TOTAL_USUARIOS; i++) {
 
@@ -39,12 +52,13 @@ public class Main {
 			String nombreUsuario = sc.nextLine();
 			System.out.print("Ingrese su DNI: ");
 			String dniUsuario = sc.nextLine();
+			Usuario usuario= new Usuario (nombreUsuario, dniUsuario);
 			int opcion;
 
 			do {
 				 System.out.println("\nHola, " + nombreUsuario + ". ¿Qué desea hacer?");
 				System.out.println("\nElige una opción:");
-				System.out.println("1. Estas son las peliculas disponibles:");
+				System.out.println("1. Peliculas disponibles:");
 				System.out.println("2. Comprar entradas: ");
 				System.out.println("3. Butacas disponibles de la Sala ");
 				System.out.println("4. Salir");
@@ -53,20 +67,51 @@ public class Main {
 				switch (opcion) {
 				case 1:
 
+					cine.listarSalas();
+					cine.elegirPelicula(usuario);
 					break;
 				case 2:
 					System.out.println("Cuantas entradas deseas: (minimo 1)");
-                    // Aquí podría haber otro do-while si queremos permitir comprar varias veces
+					// Aquí podría haber otro do-while si queremos permitir comprar varias veces
+
+					SalaDeCine sala = usuario.getSalaSeleccionada();
+					if (sala == null) {
+						System.out.println("Primero debes elegir una película (opción 1).");
+						break;
+					}
+
+					System.out.println("¿Cuántas entradas deseas comprar? (mínimo 1)");
+					int entradas = sc.nextInt();
+
+					if (entradas < 1) {
+						System.out.println("Debes comprar al menos una entrada.");
+						break;
+					}
+
+					int asientosLibres = sala.asientosLibres();
+					if (entradas > asientosLibres) {
+						System.out.println("Lo sentimos, solo hay " + asientosLibres + " asientos disponibles.");
+						break;
+					}
+
+					// Asignar las butacas
+					sala.asignarButacas(usuario);
+
+					// Registrar las entradas compradas en el usuario
+					usuario.agregarEntradas(entradas);
+
+					System.out.println("Has comprado " + entradas + " entradas para la película: "
+							+ sala.getPelicula().getTitulo());
 
 					break;
 				case 3:
-					
+					cine.mostrarOcupacionSalas();
 					break;
 				
 				default:
 					System.out.println("Opción incorrecta, inténtalo de nuevo.");
 				}
-			} while (opcion != 6);
+			} while (opcion != 3);
 			sc.close();
 		}
 		
