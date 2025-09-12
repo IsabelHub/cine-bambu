@@ -19,12 +19,9 @@ public class Cine {
 		return nombre;
 	}
 
-
 	public SalaDeCine[] getSalas() {
 		return salas;
 	}
-
-	
 	  
 	// 1. Listar películas y disponibilidad
 	public void  listarSalas() {	
@@ -44,7 +41,7 @@ public class Cine {
 
 	// 2. Listar películas y disponibilidad
 	public void elegirPelicula(Usuario usuario) {
-		System.out.println("¿Que pelicula deseas ver?Inserta numero de la pelicula elegida: ");
+		System.out.println("¿Para que pelicula quieres entradas? Inserta número: ");
 		Scanner sc = new Scanner(System.in);
 		int numPelicula = sc.nextInt();
 		for (int i = 0; i < salas.length; i++) {
@@ -60,39 +57,7 @@ public class Cine {
 		}
 
 	}
-
-	/*
-	// 2. Obtener salas con asientos libres 
-	public SalaDeCine[] SalasConEspacio(int cantidad) {
-		//cantidad es el espacio total de una sala
-		//salas es un array de tipo Sala de cine
-		// Primero, contar cuántas salas cumplen la condición
-		int contador = 0;
-		for (int i = 0; i < salas.length; i++) {
-			
-			int numeroAsientos = salas[i].asientosLibres();
-			if(salas[i].hayEspacio())
-			{
-				contador++;
-			}
-			
-		}
-
-		// Crear un array de salas disponibles con el tamaño justo de asientos
-		SalaDeCine[] disponibles = new SalaDeCine[contador];
-		int indice = 0;
-		for (int i = 0; i < salas.length; i++) {
-			if (salas[i].hayEspacio(cantidad)) {
-				disponibles[indice] = salas[i];
-				indice++;
-			}
-		}
-
-		return disponibles;
-	}
-	
-	*/
-	
+	  
 	// 3. Mostrar ocupación por sala
 	public void mostrarOcupacionSalas() {
 		System.out.println("---- Mapa de ocupación por sala ----");
@@ -102,7 +67,7 @@ public class Cine {
 		}
 	}
 
-	 
+	/*
 	// 4. Obtener una sala por número (útil para seleccionar sala)
 	public SalaDeCine numeroSala(int numSala) {
 		for (int i = 0; i < salas.length; i++) {
@@ -112,5 +77,5 @@ public class Cine {
 		}
 		return null; // Sala no encontrada
 	}
-	
+	*/ 
 }
