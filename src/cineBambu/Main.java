@@ -68,12 +68,14 @@ public class Main {
 				case 1:
 
 					cine.listarSalas();
-					cine.elegirPelicula(usuario);
+					
 					break;
 				case 2:
 					System.out.println("Cuantas entradas deseas: (minimo 1)");
 					// Aquí podría haber otro do-while si queremos permitir comprar varias veces
 
+					cine.elegirPelicula(usuario);
+					/*
 					SalaDeCine sala = usuario.getSalaSeleccionada();
 					if (sala == null) {
 						System.out.println("Primero debes elegir una película (opción 1).");
@@ -104,6 +106,7 @@ public class Main {
 							+ sala.getPelicula().getTitulo());
 
 					break;
+					*/
 				case 3:
 					cine.mostrarOcupacionSalas();
 					break;
