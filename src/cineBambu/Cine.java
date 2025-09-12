@@ -12,7 +12,7 @@ public class Cine {
 	public Cine(String nombre, SalaDeCine[] salas)
 	{
 		this.nombre=nombre;
-		this.salas=new SalaDeCine [3];
+		this.salas=salas;
 	}
 
 	public String getNombre() {
