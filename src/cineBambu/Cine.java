@@ -33,7 +33,7 @@ public class Cine {
 			//recoger en una variable los asientos libres 
 			int libres = sala.asientosLibres();
 			
-			//calculo las plazas ocupadas 
+			//calculo las plazas ocupadas  
 			int ocupados = sala.getCapacidad() - libres;
 
 			System.out.println("Sala #" + sala.getNumSala());
@@ -78,8 +78,9 @@ public class Cine {
 		}
 	}
 
+	 */
 	// 4. Obtener una sala por número (útil para seleccionar sala)
-	public SalaDeCine getSalaPorNumero(int numSala) {
+	public SalaDeCine numeroSala(int numSala) {
 		for (int i = 0; i < salas.length; i++) {
 			if (salas[i].getNumSala() == numSala) {
 				return salas[i];
@@ -87,5 +88,5 @@ public class Cine {
 		}
 		return null; // Sala no encontrada
 	}
-	*/
+	
 }
