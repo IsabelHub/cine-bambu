@@ -69,10 +69,11 @@ public class SalaDeCine {
 		return hayEspacio;
 	}
 	
-	public void asignarButacas(Usuario u) {
+	public int asignarButacas(Usuario u) {
 		System.out.println("¿Cuantos asientos quieres reservar?");//Pregunta cuantos asientos quiere el usuario
 		Scanner scan = new Scanner(System.in);
 		int numAsientos =scan.nextInt();
+		int numAsientosFinal = numAsientos;
 		if(numAsientos>0) { //Comprueba que el número de asientos no sea negativo
 			
 			while (numAsientos>0) {//Por cada asiento pregunta que butaca quiere y comprueba si esta libre
@@ -94,7 +95,7 @@ public class SalaDeCine {
 			System.out.println("El número de asientos debe ser un número mayor que 0");
 		}
 
-		
+		return numAsientosFinal;
 	}
 	
 
