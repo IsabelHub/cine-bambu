@@ -41,9 +41,9 @@ public class SalaDeCine {
 		    	}
 		        if (butacas[i][j]==null) {
 		        	contador++;
-		        	System.out.print("X ");
+		        	System.out.print(j+" ");
 		        } else {
-		        	System.out.println(j);
+		        	System.out.println("X ");
 		        }
 		    }
 		    System.out.println("Dispones de "+contador+" asientos libres");
@@ -64,8 +64,6 @@ public class SalaDeCine {
 			System.out.println("La butaca "+numButaca+" de la fila "+numFila+" no esta disponible.");
 			hayEspacio = false;
 		}
-		
-		
 		
 		return hayEspacio;
 	}
