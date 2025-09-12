@@ -30,7 +30,10 @@ public class Cine {
 	public void listarSalas() {
 		System.out.println("---- Listado de Salas ----");
 		for (SalaDeCine sala : salas) {
+			//recoger en una variable los asientos libres 
 			int libres = sala.asientosLibres();
+			
+			//calculo las plazas ocupadas  
 			int ocupados = sala.getCapacidad() - libres;
 
 			System.out.println("Sala #" + sala.getNumSala());
@@ -40,13 +43,15 @@ public class Cine {
 			System.out.println("------------------------------");
 		}
 	}
-
-	// 2. Obtener salas con al menos 'cantidad' asientos libres (sin ArrayList)
+	
+	/*
+	// 2. Obtener salas con al menos asientos libres 
 	public SalaDeCine[] getSalasConEspacio(int cantidad) {
+	//cantidad es el espacio total de una sala
 		// Primero, contar cuántas salas cumplen la condición
 		int contador = 0;
 		for (int i = 0; i < salas.length; i++) {
-			if (salas[i].hayEspacio(cantidad)) {
+			if (salas[i].asientosLibres     (cantidad)) {
 				contador++;
 			}
 		}
@@ -63,6 +68,8 @@ public class Cine {
 
 		return disponibles;
 	}
+	
+	
 
 	// 3. Mostrar ocupación por sala
 	public void mostrarOcupacionSalas() {
@@ -73,8 +80,9 @@ public class Cine {
 		}
 	}
 
+	 */
 	// 4. Obtener una sala por número (útil para seleccionar sala)
-	public SalaDeCine getSalaPorNumero(int numSala) {
+	public SalaDeCine numeroSala(int numSala) {
 		for (int i = 0; i < salas.length; i++) {
 			if (salas[i].getNumSala() == numSala) {
 				return salas[i];
@@ -82,4 +90,5 @@ public class Cine {
 		}
 		return null; // Sala no encontrada
 	}
+	
 }
