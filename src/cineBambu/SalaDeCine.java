@@ -31,7 +31,7 @@ public class SalaDeCine {
 		return butacas;
 	}
 	
-	public void asientosLibres() {//Recorre los asientos e imprime una cuadricula con los asientos disponibles
+	public int asientosLibres() {//Recorre los asientos e imprime una cuadricula con los asientos disponibles
 		int contador = 0;
 		for (int i = 0; i < butacas.length; i++) { // Recorre filas
 			
@@ -48,6 +48,8 @@ public class SalaDeCine {
 		    }
 		    System.out.println("Dispones de "+contador+" asientos libres");
 		}
+		
+		return contador;
 
 		
 	}
