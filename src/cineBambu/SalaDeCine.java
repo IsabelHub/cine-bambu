@@ -69,7 +69,7 @@ public class SalaDeCine {
 		return hayEspacio;
 	}
 	
-	public void asignarButacas(Usuario u, int numFila, int numButaca) {
+	public void asignarButacas(Usuario u) {
 		System.out.println("¿Cuantos asientos quieres reservar?");//Pregunta cuantos asientos quiere el usuario
 		Scanner scan = new Scanner(System.in);
 		int numAsientos =scan.nextInt();
@@ -77,9 +77,9 @@ public class SalaDeCine {
 			
 			while (numAsientos>0) {//Por cada asiento pregunta que butaca quiere y comprueba si esta libre
 				System.out.println("Dime que número de fila quieres.");
-				numFila = scan.nextInt();
+				int numFila = scan.nextInt();
 				System.out.println("Dime que número de butaca quieres de la fila "+numFila+".");
-				numButaca = scan.nextInt();
+				int numButaca = scan.nextInt();
 				if(hayEspacio(numFila,numButaca)==true) {//Si esta libre se la asigna al usuario y reduce el contador de asientos
 					butacas[numFila][numButaca]= u;
 					System.out.println("Has reservado la butaca "+numButaca+" de la fila "+numFila);
