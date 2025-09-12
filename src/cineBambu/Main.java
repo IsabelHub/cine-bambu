@@ -31,7 +31,7 @@ public class Main {
 		final int TOTAL_USUARIOS = 3;
 		Pelicula pelicula1 = new Pelicula("La princesa Mononoke", 90, 14, 5, 1);
 		Pelicula pelicula2 = new Pelicula("El viaje de Chihiro", 100, 14, 5, 2);
-		Pelicula pelicula3 = new Pelicula("Amelie", 120, 18, 5, 1);
+		Pelicula pelicula3 = new Pelicula("Amelie", 120, 18, 5, 3);
 		
 		Usuario[][] butacas = new Usuario[8][10];
 		

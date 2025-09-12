@@ -46,7 +46,7 @@ public class Cine {
 		int numPelicula = sc.nextInt();
 		for (int i = 0; i < salas.length; i++) {
 			if (salas[i] != null && numPelicula == salas[i].getPelicula().getId()) {
-				System.out.println("Has elegido la pelicula numero " + salas[i].getPelicula().getId() + "con titulo "
+				System.out.println("Has elegido la pelicula numero " + salas[i].getPelicula().getId() + " con titulo "
 						+ salas[i].getPelicula().getTitulo());
 				if (salas[i].asientosLibres() > 0) {
 					salas[i].asignarButacas(usuario);
