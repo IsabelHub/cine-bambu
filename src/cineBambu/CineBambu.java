@@ -3,7 +3,7 @@ package cineBambu;
 import java.util.Scanner;
 
 public class CineBambu {
-	public static void main(String[] args) {
+	public static void bienvenido() {
 		
 		Scanner sc = new Scanner(System.in);
 		final int TOTAL_USUARIOS = 1;
@@ -50,6 +50,7 @@ public class CineBambu {
 					cine.listarSalas();
 					break;
 				case 2:
+					cine.listarSalas();
 					cine.elegirPelicula(usuario);
 					break;
 				case 3:
