@@ -72,7 +72,7 @@ public class Main {
 					break;
 				case 2:
 					cine.elegirPelicula(usuario);
-					
+					break;
 				case 3:
 					cine.mostrarOcupacionSalas();
 					break;
@@ -81,10 +81,11 @@ public class Main {
 				default:
 					System.out.println("Opción incorrecta, inténtalo de nuevo.");
 				}
-			} while (opcion > 4);
-			continue;
+
+			} while (opcion != 4);
+
 		}
-		
+		sc.close();
 		
 	}
 	
