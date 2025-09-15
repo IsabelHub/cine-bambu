@@ -51,6 +51,7 @@ public class Cine {
 				System.out.println("Has elegido la pelicula numero " + salas[i].getPelicula().getId() + " con titulo "
 						+ salas[i].getPelicula().getTitulo());
 				salas[i].asignarButacas(usuario);
+				break;
 
 			}
 		}
