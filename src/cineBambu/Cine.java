@@ -24,9 +24,7 @@ public class Cine {
 	}
 
 	// 1. Listar películas y disponibilidad
-<<<<<<< HEAD
-	
-=======
+
 	public void  listarSalas() {	
 			System.out.println("---- Listado de Peliculas ----");
 			for (SalaDeCine sala : salas) {
@@ -39,7 +37,6 @@ public class Cine {
 			        System.out.println(sala.getPelicula().getId() + " Película: " + sala.getPelicula().getTitulo());
 			        System.out.println("------------------------------");
 			    }		
->>>>>>> branch 'master' of https://github.com/IsabelHub/cine-bambu.git
 		}
 	}
 
