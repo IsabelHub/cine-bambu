@@ -11,11 +11,13 @@ public class CineBambu {
 		Pelicula pelicula2 = new Pelicula("El viaje de Chihiro", 100, 14, 5, 2);
 		Pelicula pelicula3 = new Pelicula("Amelie", 120, 18, 5, 3);
 		
-		Usuario[][] butacas = new Usuario[8][10];
+		Usuario[][] butacas1 = new Usuario[8][10];
+		Usuario[][] butacas2 = new Usuario[8][10];
+		Usuario[][] butacas3 = new Usuario[8][10];
 		
-		SalaDeCine sala1 = new SalaDeCine(1,pelicula1 , butacas);
-		SalaDeCine sala2 = new SalaDeCine(2,pelicula2 , butacas);
-		SalaDeCine sala3 = new SalaDeCine(3,pelicula3 , butacas);
+		SalaDeCine sala1 = new SalaDeCine(1,pelicula1 , butacas1);
+		SalaDeCine sala2 = new SalaDeCine(2,pelicula2 , butacas2);
+		SalaDeCine sala3 = new SalaDeCine(3,pelicula3 , butacas3);
 		
 		SalaDeCine[] salas = {sala1, sala2, sala3};
 		
