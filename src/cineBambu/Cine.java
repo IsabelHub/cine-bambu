@@ -25,7 +25,7 @@ public class Cine {
 	  
 	// 1. Listar películas y disponibilidad
 	public void  listarSalas() {	
-			System.out.println("---- Listado de Salas ----");
+			System.out.println("---- Listado de Peliculas ----");
 			for (SalaDeCine sala : salas) {
 				if(sala == null)
 				{
