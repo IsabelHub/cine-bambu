@@ -3,8 +3,6 @@ package cineBambu;
 import java.util.Scanner;
 
 public class SalaDeCine {
-	//Ana
-	//código/nombre, capacidad (entera), pelicula proyectada, butacas (array de Usuario del tamaño de la capacidad; null indica asiento libre).
 	
 	private int numSala;
 	private Pelicula pelicula;
@@ -35,8 +33,9 @@ public class SalaDeCine {
 	
 	public int asientosLibres() {//Recorre los asientos e imprime una cuadricula con los asientos disponibles
 		int contador = 0;
+		System.out.println("SALA "+numSala);
 		for (int i = 0; i < butacas.length; i++) { // Recorre filas
-			System.out.print("Fila nº "+(i+1)+" butacas: ");
+			System.out.print("Fila "+(i+1)+" - butacas: ");
 			
 		    for (int j = 0; j < butacas[i].length; j++) { // Recorre columna
 		    
@@ -61,7 +60,7 @@ public class SalaDeCine {
 	public boolean hayEspacio(int numFila, int numButaca) {//Comprueba si hay esta libre la butaca solicitada o no
 		boolean hayEspacio = true;
 		
-		if(butacas[numFila][numButaca]==null) {
+		if(butacas[numFila-1][numButaca-1]==null) {
 			System.out.println("La butaca "+numButaca+" de la fila "+numFila+" esta disponible.");
 			
 		} else {
@@ -85,7 +84,7 @@ public class SalaDeCine {
 				System.out.println("Dime que número de butaca quieres de la fila "+numFila+".");
 				int numButaca = scan.nextInt();
 				if(hayEspacio(numFila,numButaca)==true) {//Si esta libre se la asigna al usuario y reduce el contador de asientos
-					butacas[numFila][numButaca]= u;
+					butacas[numFila-1][numButaca-1]= u;
 					System.out.println("Has reservado la butaca "+numButaca+" de la fila "+numFila);
 					numAsientos--;
 					
