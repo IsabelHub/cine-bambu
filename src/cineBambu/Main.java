@@ -60,7 +60,7 @@ public class Main {
 				System.out.println("\nElige una opción:");
 				System.out.println("1. Peliculas disponibles:");
 				System.out.println("2. Comprar entradas: ");
-				System.out.println("3. Butacas disponibles po Sala: ");
+				System.out.println("3. Butacas disponibles por Sala: ");
 				System.out.println("4. Salir");
 				System.out.print("\nOpción: \n");
 				opcion = sc.nextInt();
@@ -72,7 +72,7 @@ public class Main {
 					break;
 				case 2:
 					cine.elegirPelicula(usuario);
-					
+					break;
 				case 3:
 					cine.mostrarOcupacionSalas();
 					break;
@@ -80,10 +80,10 @@ public class Main {
 				default:
 					System.out.println("Opción incorrecta, inténtalo de nuevo.");
 				}
-			} while (opcion != 3);
-			sc.close();
+			} while (opcion != 4);
+			
 		}
-		
+		sc.close();
 		
 	}
 	
