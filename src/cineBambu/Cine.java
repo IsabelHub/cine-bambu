@@ -63,6 +63,7 @@ public class Cine {
 	public void mostrarOcupacionSalas() {
 		System.out.println("---- Mapa de ocupación por sala ----");
 		for (int i = 0; i < salas.length; i++) {
+			System.out.println("SALA NUMERO "+salas[i].getNumSala());
 			salas[i].asientosLibres();
 			System.out.println();
 		}
