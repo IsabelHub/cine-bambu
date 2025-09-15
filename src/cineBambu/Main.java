@@ -76,12 +76,14 @@ public class Main {
 				case 3:
 					cine.mostrarOcupacionSalas();
 					break;
+					
 				
 				default:
 					System.out.println("Opción incorrecta, inténtalo de nuevo.");
 				}
+
 			} while (opcion != 4);
-			
+
 		}
 		sc.close();
 		

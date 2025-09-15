@@ -24,17 +24,22 @@ public class Cine {
 	}
 
 	// 1. Listar películas y disponibilidad
-	public void listarSalas() {
-		System.out.println("---- Listado de Salas ----");
-		for (SalaDeCine sala : salas) {
-			if (sala == null) {
-				continue;
-			}
-			if (sala != null) {
-				System.out.println("Sala #" + sala.getNumSala());
-				System.out.println(sala.getPelicula().getId() + " Película: " + sala.getPelicula().getTitulo());
-				System.out.println("------------------------------");
-			}
+<<<<<<< HEAD
+	
+=======
+	public void  listarSalas() {	
+			System.out.println("---- Listado de Peliculas ----");
+			for (SalaDeCine sala : salas) {
+				if(sala == null)
+				{
+					continue;
+				}
+				if (sala != null) {
+			        System.out.println("Sala #" + sala.getNumSala());
+			        System.out.println(sala.getPelicula().getId() + " Película: " + sala.getPelicula().getTitulo());
+			        System.out.println("------------------------------");
+			    }		
+>>>>>>> branch 'master' of https://github.com/IsabelHub/cine-bambu.git
 		}
 	}
 
