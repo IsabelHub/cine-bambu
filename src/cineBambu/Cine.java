@@ -1,18 +1,18 @@
 package cineBambu;
 
 import java.util.Scanner;
+//Isa
 
 //nombre, salas (array de SalaDeCine).
 public class Cine {
-	
+
 	private String nombre;
 	private SalaDeCine[] salas;
-	
-	//constructor
-	public Cine(String nombre, SalaDeCine[] salas)
-	{
-		this.nombre=nombre;
-		this.salas=salas;
+
+	// constructor
+	public Cine(String nombre, SalaDeCine[] salas) {
+		this.nombre = nombre;
+		this.salas = salas;
 	}
 
 	public String getNombre() {
@@ -22,8 +22,9 @@ public class Cine {
 	public SalaDeCine[] getSalas() {
 		return salas;
 	}
-	  
+
 	// 1. Listar películas y disponibilidad
+
 	public void  listarSalas() {	
 			System.out.println("---- Listado de Peliculas ----");
 			for (SalaDeCine sala : salas) {
@@ -51,14 +52,11 @@ public class Cine {
 				if (salas[i].asientosLibres() > 0) {
 					salas[i].asignarButacas(usuario);
 				}
-
 			}
-
 		}
 
 	}
-	  
-	
+
 	// 3. Mostrar ocupación por sala
 	public void mostrarOcupacionSalas() {
 		System.out.println("---- Mapa de ocupación por sala ----");
@@ -69,17 +67,10 @@ public class Cine {
 		}
 	}
 
-
-
 	/*
-	// 4. Obtener una sala por número (útil para seleccionar sala)
-	public SalaDeCine numeroSala(int numSala) {
-		for (int i = 0; i < salas.length; i++) {
-			if (salas[i].getNumSala() == numSala) {
-				return salas[i];
-			}
-		}
-		return null; // Sala no encontrada
-	}
-	*/ 
+	 * // 4. Obtener una sala por número (útil para seleccionar sala) public
+	 * SalaDeCine numeroSala(int numSala) { for (int i = 0; i < salas.length; i++) {
+	 * if (salas[i].getNumSala() == numSala) { return salas[i]; } } return null; //
+	 * Sala no encontrada }
+	 */
 }
